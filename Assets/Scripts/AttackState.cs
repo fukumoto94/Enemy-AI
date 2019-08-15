@@ -29,4 +29,9 @@ public class AttackState : BaseState
 
         return null;
     }
+    private void OnTriggerExit(Collider other)
+    {
+                    Debug.Log(other);
+
+    }
 }

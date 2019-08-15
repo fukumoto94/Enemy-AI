@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BDD029DC-F8CF-3FF4-A3B0-CFE307593B7F}</ProjectGuid>
+    <ProjectGuid>{ADCEB06D-07E6-56A1-FECA-C2C95F54A782}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,39 +55,56 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\3rd-Party\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
+     <Compile Include="Assets\3rd-Party\KY_effects\Script\ConGUI.cs" />
+     <Compile Include="Assets\3rd-Party\KY_effects\Script\Lighting.cs" />
+     <Compile Include="Assets\Dissolve Edge by Moonflower Carnivore\Scripts\HideIfDisabledDrawer.cs" />
      <Compile Include="Assets\Scripts\AttackState.cs" />
      <Compile Include="Assets\Scripts\BaseState.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraCollision.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\ChaseState.cs" />
      <Compile Include="Assets\Scripts\Drone.cs" />
      <Compile Include="Assets\Scripts\GameSettings.cs" />
+     <Compile Include="Assets\Scripts\Itens\ItemProperties.cs" />
+     <Compile Include="Assets\Scripts\Itens\ItemStatus.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerAnimation.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\Player\RangeAttack.cs" />
      <Compile Include="Assets\Scripts\StateMachine.cs" />
      <Compile Include="Assets\Scripts\WanderState.cs" />
+     <None Include="Assets\Dissolve Edge by Moonflower Carnivore\Shaders\Transparent_Unlit_DissolveEdge.shader" />
+     <None Include="Assets\3rd-Party\EffectExamples\Misc Effects\Shaders\Dissolve.shader" />
+     <None Include="Assets\3rd-Party\KY_effects\MagicEffectsPackFree\ReadMe.txt" />
+     <None Include="Assets\Dissolve Edge by Moonflower Carnivore\readme_DissolveEdge.txt" />
+     <None Include="Assets\3rd-Party\EffectExamples\Magic Effects\Shaders\Ice.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>/Users/lucastadashifukumoto/Unity Games/DroneProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>/Users/lucastadashifukumoto/UnityGames/Lucas/DroneProject-AI/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
- <HintPath>/Users/lucastadashifukumoto/Unity Games/DroneProject/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+ <HintPath>/Users/lucastadashifukumoto/UnityGames/Lucas/DroneProject-AI/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Users/lucastadashifukumoto/Unity Games/DroneProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/Users/lucastadashifukumoto/UnityGames/Lucas/DroneProject-AI/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/Users/lucastadashifukumoto/Unity Games/DroneProject/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/Users/lucastadashifukumoto/UnityGames/Lucas/DroneProject-AI/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>/Users/lucastadashifukumoto/Unity Games/DroneProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>/Users/lucastadashifukumoto/UnityGames/Lucas/DroneProject-AI/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/Users/lucastadashifukumoto/Unity Games/DroneProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/Users/lucastadashifukumoto/UnityGames/Lucas/DroneProject-AI/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AddOns.Editor">
- <HintPath>/Users/lucastadashifukumoto/Unity Games/DroneProject/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+ <HintPath>/Users/lucastadashifukumoto/UnityGames/Lucas/DroneProject-AI/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/lucastadashifukumoto/Unity Games/DroneProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/Users/lucastadashifukumoto/UnityGames/Lucas/DroneProject-AI/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>/Users/lucastadashifukumoto/Unity Games/DroneProject/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>/Users/lucastadashifukumoto/UnityGames/Lucas/DroneProject-AI/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -273,13 +290,13 @@
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>/Users/lucastadashifukumoto/Unity Games/DroneProject/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>/Users/lucastadashifukumoto/UnityGames/Lucas/DroneProject-AI/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>/Users/lucastadashifukumoto/Unity Games/DroneProject/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>/Users/lucastadashifukumoto/UnityGames/Lucas/DroneProject-AI/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/Users/lucastadashifukumoto/Unity Games/DroneProject/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>/Users/lucastadashifukumoto/UnityGames/Lucas/DroneProject-AI/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

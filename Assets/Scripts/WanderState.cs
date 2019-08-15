@@ -43,7 +43,7 @@ public class WanderState : BaseState
        while(IsPathBlocked())
        {
            FindRandomDestination();
-           Debug.Log( message: "Wall");
+        //   Debug.Log( message: "Wall");
        }
 
        return null;
@@ -79,7 +79,7 @@ public class WanderState : BaseState
         _direction = Vector3.Normalize( _destination.Value - transform.position);
         _direction = new Vector3( _direction.x, y: 0f, _direction.z);
         _desiredRotation = Quaternion.LookRotation( _direction);
-        Debug.Log(message: "Got Direction");
+//        Debug.Log(message: "Got Direction");
    }
 
    Quaternion startingAngle = Quaternion.AngleAxis( angle: -60, Vector3.up);
@@ -96,15 +96,17 @@ public class WanderState : BaseState
        {
            if(Physics.Raycast( origin: pos, direction, out hit, GameSettings.AggroRadius))
            {
-               var drone = hit.collider.GetComponent<Drone>();
-               if(drone != null && drone.Team != gameObject.GetComponent<Drone>().Team)
+               Debug.Log(hit.collider.GetComponent<PlayerAttack>() != null);
+            if(hit.collider.GetComponent<PlayerAttack>() != null)
                {
                    Debug.DrawRay( start: pos, dir: direction * hit.distance, Color.red);
-                   return drone.transform;
+                   return hit.collider.transform;
                }
                else{
                    Debug.DrawRay(start: pos, dir: direction * hit.distance, Color.yellow);
                }
+               
+             
            }else{
                Debug.DrawRay(start: pos, dir: direction * GameSettings.AggroRadius, Color.white);
            }

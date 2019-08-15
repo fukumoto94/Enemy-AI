@@ -52,7 +52,7 @@ public class Drone : MonoBehaviour
         _laserVisual.SetActive(value: false);
 
         if(Target != null){
-            GameObject.Destroy(Target.gameObject);
+            //GameObject.Destroy(Target.gameObject);
         }
     }
 }
